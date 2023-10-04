@@ -1,3 +1,5 @@
+@use '../variables';
+
 .button {
     padding: 12px;
     font-size: 18px;
@@ -7,8 +9,12 @@
     white-space: nowrap;
 
     &--primary {
-        color: #fff;
-        background-color: #4F2AC3;
+        color: variables.$textColor;
+        background-color: variables.$purple;
+
+        &:hover {
+            background-color: lighten(variables.$purple, 5%);
+        }
     }
 
     @media (max-width: 640px) {
